@@ -7,6 +7,10 @@ import SupplierPage from './pages/SupplierPage'
 import AddEditSupplierPage from './pages/AddEditSupplierPage'
 import ProductPage from './pages/ProductPage'
 import AddEditProductPage from './pages/AddEditProductPage'
+import PurchasePage from './pages/PurchasePage'
+import SellPage from './pages/SellPage'
+import TransactionsPage from './pages/TransactionsPage'
+import TransactionDetailsPage from './pages/TransactionDetailsPage'
 
 const App = () => {
   return (
@@ -24,6 +28,15 @@ const App = () => {
 
         <Route path="/add-product" element={<AdminRoute element={<AddEditProductPage />} />} />
         <Route path="/edit-product/:productId" element={<AdminRoute element={<AddEditProductPage />} />} />
+
+        {/* ADMIN AND MANAGERS ROUTES */}
+
+        <Route path="/purchase" element={<ProtectedRoute element={<PurchasePage />} />} />
+        <Route path="/sell" element={<ProtectedRoute element={<SellPage />} />} />
+        <Route path="/transaction" element={<ProtectedRoute element={<TransactionsPage />} />} />
+        <Route path="/transaction/:transactionId" element={<ProtectedRoute element={<TransactionDetailsPage />} />} />
+
+
 
 
       </Routes>
