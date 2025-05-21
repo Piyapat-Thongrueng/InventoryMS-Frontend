@@ -157,9 +157,9 @@ const DashboardPage = () => {
                   <Line
                     type={"monotone"}
                     dataKey={selectedData}
-                    stroke="#008080"
+                    stroke="#3b50ce"
                     fillOpacity={0.3}
-                    fill="#008080"
+                    fill="#3b50ce"
                   />
                 </LineChart>
               </ResponsiveContainer>

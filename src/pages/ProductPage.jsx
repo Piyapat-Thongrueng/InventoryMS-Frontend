@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Layout from "../component/Layout"
+import Layout from "../component/Layout";
 import ApiService from "../service/ApiService";
 import { useNavigate } from "react-router-dom";
 import PaginationComponent from "../component/PaginationComponent";
@@ -50,7 +50,7 @@ const ProductPage = () => {
       } catch (error) {
         showMessage(
           error.response?.data?.message ||
-          "Error Deleting in a product: " + error
+            "Error Deleting in a product: " + error
         );
       }
     }
@@ -97,8 +97,18 @@ const ProductPage = () => {
                 </div>
 
                 <div className="product-actions">
-                  <button className="edit-btn" onClick={() => navigate(`/edit-product/${product.id}`)}>Edit</button>
-                  <button className="delete-btn" onClick={() => handleDeleteProduct(product.id)}>Delete</button>
+                  <button
+                    className="edit-btn"
+                    onClick={() => navigate(`/edit-product/${product.id}`)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="delete-btn"
+                    onClick={() => handleDeleteProduct(product.id)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ApiService from "../service/ApiService";
+import logo from "../assets/react.svg";
 
 const logout = () => {
   ApiService.logout();
@@ -11,7 +12,10 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <h1 className="ims">IMS</h1>
+      <div className="logo-sidebar">
+        <img src={logo} alt="logoreact" />
+        <Link to="/dashboard" className="ims">IMS</Link>
+      </div>
       <ul className="nav-links">
         {isAuth && (
           <li>
